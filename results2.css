@@ -1,0 +1,49 @@
+
+h1{
+  font-size: 4vh;
+  padding: 2% 0% 0% 3%;
+}
+
+p{
+  font-size: 2.5vh;
+  padding: 2% 0% 4% 3%;
+  text-align: center;
+  color: #f6b1c3;
+}
+
+body {
+  background-size: cover;
+  font-family: Calibri, sans-serif
+}
+
+
+.leftcolumn{
+  /* background: #f6b1c3; */
+  background: #f6b1c3;
+  width: 67%;
+  float: left;
+  box-sizing: border-box;
+  padding-left: 2%;
+  padding-right: 5%;
+}
+
+.rightcolumn {
+  width: 33%;
+  float: left;
+  box-sizing: border-box;
+}
+
+.corgiphoto{
+  width: 20%;
+  height: auto;
+  position: fixed; 
+  /* top: 0%; */
+  bottom: 10%; 
+  padding-left: 7%;
+}
+
+li{
+  padding-bottom: 4vh;
+  font-size: 2vh;
+}
+

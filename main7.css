@@ -1,0 +1,111 @@
+/* top image section */
+.house{
+  width: 100%;
+  height: 75vh; /*original 50vh*/
+  background-color: #ef788c;
+}
+
+#floor{
+  background-color: #bc0d34;
+  position: relative; top: 50%; /*original 50%*/
+  width: 100%; height: 50%; /* original height 50% */
+  z-index: 1;
+}
+
+.furniture{
+  position: absolute; top: 13%; left: 70%; /*original top 8%*/
+  width: auto; height: 40%;
+  z-index: 2;
+}
+
+#carpet{
+  background-color: #f6b1c3;
+  position: absolute; top: 45%; left: 25%; /*original top 33%*/
+  width: 50%; height: 10%;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+#corgi {
+  position: absolute; top: 35%; left: 50%; /*original top 25%*/
+  width: 20vh; height:20vh; 
+  z-index: 3;
+
+  background-image: url(/static/images/full_walk_4.png);
+  background-repeat: no-repeat;
+  background-size: 3200%;
+
+  animation: 
+    corgiwalk 10s steps(31) infinite,
+    moveOnScreen 10s linear infinite;
+
+}
+
+@keyframes corgiwalk
+	{
+    0%{background-position: 0%;}
+    100%{background-position: 100%;}
+	}
+
+@keyframes moveOnScreen
+	{
+		0%{transform:translateX(40%);}
+    37.5%{transform:translateX(-120%);}
+    50%{transform:translateX(-120%);}
+		87.5%{transform:translateX(40%);}
+    100%{transform:translateX(40%);}
+	}
+
+
+
+/* bottom form section */
+
+.myForm {
+  height: 15vh;
+  background:rgba(182, 182, 182, 0.247); 
+  padding: 3%;
+}
+
+.column {
+  float: left;
+  height: 15vh;
+}
+
+.left{
+  width: 15%;
+}
+
+.middle {
+  width: 65%;
+}
+
+.comment{
+   /* min-height: calc(100% - 2em); */
+   width: 100%;
+   height:80%;
+}
+
+.right{
+  width: 20%;
+}
+
+
+body {
+  font-family: Calibri, sans-serif
+}
+
+h1{
+  text-align:center;
+  font-size: 2.5vh;
+}
+
+.button {
+  background-color: #bc0d34; /* Green */
+  border: none;
+  color: white;
+  padding: 5%;
+  margin: 0% auto 7% 14%;
+  text-align: center;
+  font-size: 2vh;
+  width: 15vh;
+} 

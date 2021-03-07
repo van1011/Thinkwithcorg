@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset = "UTF-8">
+  <title> Ideas Summary </title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='results2.css') }}">
+</head>
+
+<body>
+
+  <div class = "leftcolumn">
+  <h1> Ideas Summary </h1>
+
+  <ul>  
+    {% for idea in ideas %}  
+      <li> {{ idea.content }} </li>
+    {% endfor %}      
+  </ul> 
+  </div>  
+
+  <div class = "rightcolumn">
+      <p><b> Great job, you did it! </b></p>
+      <img src="/static/images/bigcorg.png", class = "corgiphoto"> </img>
+  </div>
+
+</body>
+</html>
+
+

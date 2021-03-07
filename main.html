@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset = "UTF-8">
+  <title> Think With Corg </title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='main7.css') }}">
+</head>
+
+<body>
+  
+  <!-- Animation -->
+  <div class = "house">
+    <div id="corgi"></div>
+    <img src="/static/images/furniture.PNG" class = "furniture"></img>
+    <div id ="floor"></div>
+    <div id = "carpet"></div>
+  </div>
+
+<!-- Form portion -->
+<div class="myForm">
+
+    <div class="column left">
+		<h1> Add an Idea: </h1> 
+    </div>
+
+<!-- Idea text box and add button -->
+  <form action = "{{url_for("insert")}}" method = "POST">
+
+      <div class="column middle">
+      <input type = "text" name="content" class = "comment">
+      </div>
+
+      <div class = "column right">
+      <input type = "submit" value = "Add Idea" id = "add" class = "button">
+    </form>
+
+<!-- submit to summary page  -->
+    <form action = "{{url_for("result")}}" method = "POST">
+      <input type = "submit" value = "Summary" id = "sub" class = "button">
+    </form>
+    </div> 
+    <!-- end div for col right -->
+
+  <!-- output added message-->
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for msg in messages %}
+        {{ msg }} 
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+</div>
+
+</body>
+</html>
+
+
+
